@@ -1,0 +1,3 @@
+for i in `ls *.png`; do convert -negate ${i%.*}.png ${i%.*}-inverted.png; done
+
+for i in `ls *.png`; do mogrify -resize 18 *.png; done
