@@ -11,7 +11,7 @@
 			font-family:		Calibri;
 			font-size:			18px;
 			text-align:			center;
-			box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1); 
+			box-shadow: 0 5px 5px rgba(0, 0, 0, 0.08); 
 		">
 			<table style="margin: auto;">
 				<tr>
@@ -57,25 +57,16 @@
 		<td>##IFticket.solution.type## ##ticket.solution.type## ##ENDIFticket.solution.type## ##ELSEticket.solution.type## ##ENDELSEticket.solution.type##</td>
 	</tr>
 	<tr>
-		<td colspan="3" style="padding: 8px; background-color: #9fd6ed; text-align: center;">
-			<div style="text-align: left; font-family: Calibri; font-size: 15px;">##ticket.solution.description##</div>
-		</td>
-	</tr>
-	<tr style="text-align: center;">
-		<td	colspan="3"
+		<td colspan="3"
 			style="
-				background-color:			#daeaf1;
-				color:						#dc8600;
-				height:						15px;
-				padding: 					3px;
+				padding: 8px;
+				background-color: #9fd6ed;
+				text-align: center;
 				border-bottom-left-radius:	5px;
 				border-bottom-right-radius:	5px;
-				font-family: 				Calibri;
-				font-size: 					15px;
-				text-align: 				center;
-				box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+				box-shadow: 0 5px 5px rgba(0, 0, 0, 0.08);
 			">
-			<b>Observação: ##lang.ticket.autoclosewarning##</b>
+			<div style="text-align: left; font-family: Calibri; font-size: 15px; ">##ticket.solution.description##</div>
 		</td>
 	</tr>
 </table>
@@ -136,7 +127,7 @@
 						font-family: 				Calibri;
 						font-size: 					15px;
 						text-align: 				center;
-						box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+						box-shadow: 0 5px 5px rgba(0, 0, 0, 0.08);
 					">
 					<b>Observação: ##lang.ticket.autoclosewarning##</b>
 				</td>
@@ -183,7 +174,7 @@
 					font-family:				Calibri;
 					font-size:					13px;
 					text-align:					center;
-					box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+					box-shadow: 0 5px 5px rgba(0, 0, 0, 0.08);
 				">
 					##lang.ticket.numberoffollowups##: ##ticket.numberoffollowups##
 				</td>
@@ -195,9 +186,9 @@
 
 	<b style="font-family: monospace; font-size: 14px; color: red;">##FOREACHfollowups##</b>
 		<div style="font-family: Calibri; font-size: 15px; text-align: center;">
-			<table style="width: 99%; min-width: 60%; text-align: center; border-collapse: collapse; border-radius: 5px;">
+			<table style="width: 100%; min-width: 60%; text-align: center; border-collapse: collapse; border-radius: 5px;">
 				<tr style="background-color: #939393; color: white; font-family: Calibri; font-size: 15px;">
-					<td>
+					<td style="border-top-left-radius: 5px;">
 						<table style="margin: auto; padding: 5px;">
 							<tr>
 								<td><img src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/time-inverted.png" width="14" height="14"></img></td>
@@ -221,7 +212,7 @@
 							</tr>
 						</table>
 					</td>
-					<td>
+					<td style="border-top-right-radius: 5px;">
 						<table style="margin: auto; padding: 5px;">
 							<tr>
 								<td>
@@ -245,7 +236,7 @@
 							min-height: 25px;
 							border-bottom-left-radius:	5px;
 							border-bottom-right-radius:	5px;
-							box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+							box-shadow: 0 5px 5px rgba(0, 0, 0, 0.08);
 					">
 						<div style="text-align: left; font-family: Calibri; font-size: 15px;">##followup.description##</div>
 					</td>
@@ -294,7 +285,7 @@
 					font-family:				Calibri;
 					font-size:					13px;
 					text-align:					center;
-					box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+					box-shadow: 0 5px 5px rgba(0, 0, 0, 0.08);
 				">
 					##lang.ticket.numberoftasks##: ##ticket.numberoftasks##
 				</td>
@@ -393,7 +384,7 @@
 				##lang.ticket.id##
 			</td>
 			<td style="background-color: #b2e0b6; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%;">
-				##ticket.id##
+				<a href="##ticket.url##">##ticket.id##</a>
 			</td>
 		</tr>
 		<tr style="border-bottom: 1px solid white;">
@@ -571,10 +562,10 @@
 			</td>
 		</tr>
 		<tr style="border-bottom: 1px solid white;">
-			<td style="background-color: #9dc6a1; color: black; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; border-right: 1px solid white; text-align: left; padding: 4px; width: 20%;">
+			<td style="background-color: #9dc6a1; color: black; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; border-right: 1px solid white; text-align: left; padding: 4px; width: 20%; border-bottom-left-radius: 5px; box-shadow: 0 5px 5px rgba(0, 0, 0, 0.08);">
 				##lang.ticket.closedate##
 			</td>
-			<td style="background-color: #b2e0b6; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%;">
+			<td style="background-color: #b2e0b6; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%; border-bottom-right-radius: 5px; box-shadow: 0 5px 5px rgba(0, 0, 0, 0.08);">
 				##ticket.closedate##
 			</td>
 		</tr>
