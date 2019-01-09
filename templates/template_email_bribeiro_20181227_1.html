@@ -1,0 +1,502 @@
+##IFticket.storestatus=6##
+	<table style="width: 100%; min-width: 60%; text-align: center; border-collapse: collapse;">
+		<tr>
+			<td style="
+				/*background-color:	#b62e90;*/
+				background-color:	#414c41;
+				color:				white;
+				padding:			5px;
+				font-family:		Calibri;
+				font-size:			18px;
+				text-align:			center;"
+			>
+				<b>ENCERRAMENTO DO CHAMADO</b>
+			</td>
+		</tr>
+	</table>
+<div> </div>
+	<table style="width: 100%; min-width: 60%; text-align: center; border-collapse: collapse;">
+		<tr>
+			<td style="
+				background-color:	#009551;
+				color:				white;
+				padding:			5px;
+				font-family:		Calibri;
+				font-size:			18px;
+				text-align:			center;"
+			>
+				<b>SOLUÇÃO DO CHAMADO</b>
+			</td>
+		</tr>
+		<tr>
+			<div style="font-family: Calibri; font-size: 15px;">
+				<table style="width: 100%; min-width: 60%; text-align: center; border-collapse: collapse;">
+					<tr style="background-color: #00a65a; color: white; font-family: Calibri; font-size: 14px;">
+						<th><b>Data/Hora</th>
+						<th><b>Autor</b></th>
+						<th><b>##lang.ticket.solution.type##</b></th>
+					</tr>
+					<tr style="background-color: #00a65a; color: white; font-family: Calibri; font-size: 14px;">
+						<td>##ticket.solvedate##</td>
+						<td>##ticket.solution.approval.author##</td>
+						<td>##IFticket.solution.type## ##ticket.solution.type## ##ENDIFticket.solution.type## ##ELSEticket.solution.type## ##ENDELSEticket.solution.type##</td>
+					</tr>
+					<tr>
+						<td colspan="3" style="padding: 8px;  background-color: #e8e8e8; text-align: center;">
+							<div style="text-align: left; font-family: Calibri; font-size: 15px;">##ticket.solution.description##</div>
+						</td>
+					</tr>
+					<tr style="text-align: center;">
+						<td colspan="3" style=" background-color: #d8d8d8; color: #da8c10; padding: 5px; font-family: Calibri; font-size: 15px; text-align: center;">
+							<b>Observação: ##lang.ticket.autoclosewarning##</b>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</tr>
+	</table>
+<div> </div>
+<div> </div>
+##ENDIFticket.storestatus##
+
+##ELSEticket.storestatus##
+	##IFticket.storestatus=5##
+		<table style="width: 100%; min-width: 60%; text-align: center; border-collapse: collapse;">
+			<tr>
+				<td style="
+					background-color:	#009551;
+					color:				white;
+					padding:			5px;
+					font-family:		Calibri;
+					font-size:			18px;
+					text-align:			center;"
+				>
+					<b>SOLUÇÃO DO CHAMADO</b>
+				</td>
+			</tr>
+			
+			<tr>
+				<div style="font-family: Calibri; font-size: 15px;">
+					<table style="width: 100%; min-width: 60%; text-align: center; border-collapse: collapse;">
+						<tr style="background-color: #00a65a; color: white; font-family: Calibri; font-size: 14px;">
+							<th><b>Data/Hora</th>
+							<th><b>Autor</b></th>
+							<th><b>##lang.ticket.solution.type##</b></th>
+						</tr>
+						<tr style="background-color: #00a65a; color: white; font-family: Calibri; font-size: 14px;">
+							<td>##ticket.solvedate##</td>
+							<td>##ticket.solution.approval.author##</td>
+							<td>##IFticket.solution.type## ##ticket.solution.type## ##ENDIFticket.solution.type## ##ELSEticket.solution.type## ##ENDELSEticket.solution.type##</td>
+						</tr>
+						<tr>
+							<td colspan="3" style="padding: 8px;  background-color: #e8e8e8; text-align: center;">
+								<div style="text-align: left; font-family: Calibri; font-size: 15px;">##ticket.solution.description##</div>
+							</td>
+						</tr>
+						<tr style="text-align: center;">
+							<td colspan="3" style=" background-color: #d8d8d8; color: #da8c10; padding: 5px; font-family: Calibri; font-size: 15px; text-align: center;">
+								<b>Observação: ##lang.ticket.autoclosewarning##</b>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</tr>
+		</table>
+	<div> </div>
+	<div> </div>
+	##ENDIFticket.storestatus##
+##ENDELSEticket.storestatus##
+
+##IFticket.numberoffollowups=0## ##ENDIFticket.numberoffollowups## ##ELSEticket.numberoffollowups##
+<div style="font-family: Calibri; font-size: 15px; text-align: center;">
+	<table style="width: 100%; min-width: 60%; text-align: center; border-collapse: collapse;">
+		<tr>
+			<td style="
+				background-color:	#27688e;
+				color:				white;
+				padding:			5px;
+				font-family:		Calibri;
+				font-size:			18px;
+				text-align:			center;"
+			>
+				<b>ACOMPANHAMENTOS DO CHAMADO</b>
+			</td>
+		</tr>
+		<tr style="text-align: center;">
+			<td style="
+				background-color:	#e8e8e8;
+				padding:			2px;
+				font-family:		Calibri;
+				font-size:			13px;
+				text-align:			center;"
+			>
+				##lang.ticket.numberoffollowups##: ##ticket.numberoffollowups##
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div> </div>
+
+<div style="font-family: Calibri; font-size: 15px;">
+	##FOREACHfollowups##
+	<div style="font-family: Calibri; font-size: 15px;">
+		<table style="width: 100%; min-width: 60%; text-align: center; border-collapse: collapse;">
+			<!--
+			<tr style="background-color: #126180; color: white; font-family: Calibri; font-size: 15px;">
+				<td><b>Data/Hora:</b> ##followup.date##</td>
+				<td><b>##lang.followup.author##:</b> ##followup.author##</td>
+				<td><b>##lang.followup.requesttype##:</b> ##followup.requesttype##</td>
+				<td><b>##lang.followup.isprivate##:</b> ##followup.isprivate##</td>
+			</tr>
+			-->
+			<tr style="background-color: #3c8dbc; color: white; font-family: Calibri; font-size: 14px;">
+				<th><b>Data/Hora</th>
+				<th><b>##lang.followup.author##</b></th>
+				<th><b>##lang.followup.requesttype##</b></th>
+				<th><b>##lang.followup.isprivate##</b></th>
+			</tr>
+			<tr style="background-color: #3c8dbc; color: white; font-family: Calibri; font-size: 14px;">
+				<td>##followup.date##</td>
+				<td>##followup.author##</td>
+				<td>##followup.requesttype##</td>
+				<td>##followup.isprivate##</td>
+			</tr>
+			<tr>
+				<td colspan="4" style="padding: 8px;  background-color: #e8e8e8; text-align: center;">
+					<div style="text-align: left; font-family: Calibri; font-size: 15px;">##followup.description##</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div> </div>
+	<div> </div>
+	##ENDFOREACHfollowups##
+	##ENDELSEticket.numberoffollowups##
+</div>
+
+<!-- modelo de tabla de acompanhamento
+<div style="font-family: Calibri; font-size: 15px;">
+	##FOREACHfollowups##
+	<div style="font-family: Calibri; font-size: 15px;">
+		<table style="width: 100%; min-width: 60%; text-align: center; border-collapse: collapse; border: 2px solid #cccccc;">
+			<tr style="background-color: #f2f2f2;">
+				<th style="border: 2px solid #cccccc; font-size: 13px;">Data do acompanhamento</th>
+				<th style="border: 2px solid #cccccc; font-size: 13px;">##lang.followup.author##</th>
+				<th style="border: 2px solid #cccccc; font-size: 13px;">##lang.followup.requesttype##</th>
+				<th style="border: 2px solid #cccccc; font-size: 13px;">##lang.followup.isprivate##</th>
+			</tr>
+			<tr style="background-color: #f2f2f2;">
+				<td style="border: 2px solid #cccccc; font-size: 13px;">##followup.date##</td>
+				<td style="border: 2px solid #cccccc; font-size: 13px;">##followup.author##</td>
+				<td style="border: 2px solid #cccccc; font-size: 13px;">##followup.requesttype##</td>
+				<td style="border: 2px solid #cccccc; font-size: 13px;">##followup.isprivate##</td>
+			</tr>
+			<tr>
+				<td colspan="4" style="border: 2px solid #cccccc; padding: 10px; text-align: left;">##followup.description##</td>
+			</tr>
+		</table>
+	</div>
+	<br />
+	<br />
+	##ENDFOREACHfollowups##
+	##ENDELSEticket.numberoffollowups##
+</div>
+-->
+
+<!-- modelo de tabla de acompanhamento
+<div style="font-family: Calibri; font-size: 15px;">
+	##FOREACHfollowups##
+	<strong>[##followup.date##]</strong><br />
+	<strong>##lang.followup.isprivate##:</strong> ##followup.isprivate##<br />
+	<strong>##lang.followup.author##:</strong> ##followup.author## <br />
+	<strong>##lang.followup.description##:</strong> ##followup.description## <br />
+	<strong>##lang.followup.date##:</strong> ##followup.date## <br />
+	<strong>##lang.followup.requesttype##:</strong> ##followup.requesttype## <br />
+	<hr /><br />
+	##ENDFOREACHfollowups##
+	##ENDELSEticket.numberoffollowups##
+</div>
+-->
+
+
+
+<div style="text-align: center;">
+	<table style="width: 100%; min-width: 60%; text-align: center; border-collapse: collapse; font-family: Calibri; font-size: 15px;">
+		<tr>
+			<td colspan="2"
+				style="
+				background-color:	#da8c10;
+				color:				white;
+				border-bottom:		1px solid white;
+				padding:			5px;
+				font-family:		Calibri;
+				font-size:			18px;
+				text-align:			center;"
+			>
+				<b>DADOS DO CHAMADO</b>
+			</td>
+		</tr>
+		<tr style="border-bottom: 1px solid white;">
+			<td style="background-color: #f3bf6e; color: black; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; border-right: 1px solid white; text-align: left; padding: 4px; width: 20%;">
+				URL
+			</td>
+			<td style="background-color: #f5e2c4; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%;">
+				##ticket.url##
+			</td>
+		</tr>
+		<tr style="border-bottom: 1px solid white;">
+			<td style="background-color: #f3bf6e; color: black; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; border-right: 1px solid white; text-align: left; padding: 4px; width: 20%;">
+				##lang.ticket.title##
+			</td>
+			<td style="background-color: #f5e2c4; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%;">
+				##ticket.title##
+			</td>
+		</tr>
+		<tr style="border-bottom: 1px solid white;">
+			<td style="background-color: #f3bf6e; color: black; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; border-right: 1px solid white; text-align: left; padding: 4px; width: 20%;">
+				##lang.ticket.authors##
+			</td>
+			<td style="background-color: #f5e2c4; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%;">
+				##IFticket.authors## ##ticket.authors## ##ENDIFticket.authors## ##ELSEticket.authors##--##ENDELSEticket.authors##
+			</td>
+		</tr>
+		<tr style="border-bottom: 1px solid white;">
+			<td style="background-color: #f3bf6e; color: black; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; border-right: 1px solid white; text-align: left; padding: 4px; width: 20%;">
+				##lang.ticket.creationdate##
+			</td>
+			<td style="background-color: #f5e2c4; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%;">
+				##ticket.creationdate##
+			</td>
+		</tr>
+		<tr style="border-bottom: 1px solid white;">
+			<td style="background-color: #f3bf6e; color: black; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; border-right: 1px solid white; text-align: left; padding: 4px; width: 20%;">
+				##lang.ticket.closedate##
+			</td>
+			<td style="background-color: #f5e2c4; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%;">
+				##ticket.closedate##
+			</td>
+		</tr>
+		<tr style="border-bottom: 1px solid white;">
+			<td style="background-color: #f3bf6e; color: black; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; border-right: 1px solid white; text-align: left; padding: 4px; width: 20%;">
+				##lang.ticket.requesttype##
+			</td>
+			<td style="background-color: #f5e2c4; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%;">
+				##ticket.requesttype##
+			</td>
+		</tr>
+		<tr style="border-bottom: 1px solid white;">
+			<td style="background-color: #f3bf6e; color: black; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; border-right: 1px solid white; text-align: left; padding: 4px; width: 20%;">
+				##lang.ticket.location##
+			</td>
+			<td style="background-color: #f5e2c4; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%;">
+				##ticket.location##
+			</td>
+		</tr>
+		<tr style="border-bottom: 1px solid white;">
+			<td style="background-color: #f3bf6e; color: black; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; border-right: 1px solid white; text-align: left; padding: 4px; width: 20%;">
+				##lang.ticket.item.name##
+			</td>
+			<td style="background-color: #f5e2c4; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%;">
+				##IFticket.itemtype## ##ticket.itemtype## - ##ticket.item.name##
+					##IFticket.item.model## ##lang.ticket.item.model## : ##ticket.item.model## ##ENDIFticket.item.model##
+					##IFticket.item.serial## ##lang.ticket.item.serial## : ##ticket.item.serial## ##ENDIFticket.item.serial##
+					##IFticket.item.otherserial## ##lang.ticket.item.otherserial## : ##ticket.item.otherserial## ##ENDIFticket.item.otherserial##
+				##ENDIFticket.itemtype##
+			</td>
+		</tr>
+		<tr style="border-bottom: 1px solid white;">
+			<td style="background-color: #f3bf6e; color: black; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; border-right: 1px solid white; text-align: left; padding: 4px; width: 20%;">
+				##lang.ticket.assigntousers##
+			</td>
+			<td style="background-color: #f5e2c4; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%;">
+				##ticket.assigntousers##
+			</td>
+		</tr>
+		<tr style="border-bottom: 1px solid white;">
+			<td style="background-color: #f3bf6e; color: black; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; border-right: 1px solid white; text-align: left; padding: 4px; width: 20%;">
+				##lang.ticket.status##
+			</td>
+			<td style="background-color: #f5e2c4; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%;">
+				##ticket.status##
+			</td>
+		</tr>
+		<tr style="border-bottom: 1px solid white;">
+			<td style="background-color: #f3bf6e; color: black; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; border-right: 1px solid white; text-align: left; padding: 4px; width: 20%;">
+				##lang.ticket.assigntogroups##
+			</td>
+			<td style="background-color: #f5e2c4; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%;">
+				##ticket.assigntogroups##
+			</td>
+		</tr>
+		<tr style="border-bottom: 1px solid white;">
+			<td style="background-color: #f3bf6e; color: black; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; border-right: 1px solid white; text-align: left; padding: 4px; width: 20%;">
+				##lang.ticket.urgency##
+			</td>
+			<td style="background-color: #f5e2c4; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%;">
+				##ticket.urgency##
+			</td>
+		</tr>
+		<tr style="border-bottom: 1px solid white;">
+			<td style="background-color: #f3bf6e; color: black; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; border-right: 1px solid white; text-align: left; padding: 4px; width: 20%;">
+				##lang.ticket.impact##
+			</td>
+			<td style="background-color: #f5e2c4; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%;">
+				##ticket.impact##
+			</td>
+		</tr>
+		<tr style="border-bottom: 1px solid white;">
+			<td style="background-color: #f3bf6e; color: black; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; border-right: 1px solid white; text-align: left; padding: 4px; width: 20%;">
+				##lang.ticket.priority##
+			</td>
+			<td style="background-color: #f5e2c4; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%;">
+				##ticket.priority##
+			</td>
+		</tr>
+		<tr style="border-bottom: 1px solid white;">
+			<td style="background-color: #f3bf6e; color: black; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; border-right: 1px solid white; text-align: left; padding: 4px; width: 20%;">
+				##IFlang.ticket.user.email## ##lang.ticket.user.email## ##ENDIFlang.ticket.user.email##
+				##IFlang.author.email## ##lang.author.email## ##ENDIFlang.author.email##
+			</td>
+			<td style="background-color: #f5e2c4; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%;">
+				##IFticket.user.email## ##ticket.user.email## ##ENDIFticket.user.email##
+				##IFauthor.email## ##author.email## ##ENDIFauthor.email##
+			</td>
+		</tr>
+		<tr style="border-bottom: 1px solid white;">
+			<td style="background-color: #f3bf6e; color: black; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; border-right: 1px solid white; text-align: left; padding: 4px; width: 20%;">
+				##lang.ticket.category##
+			</td>
+			<td style="background-color: #f5e2c4; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%;">
+				##ticket.category##
+			</td>
+		</tr>
+		<tr style="border-bottom: 1px solid white;">
+			<td style="background-color: #f3bf6e; color: black; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; border-right: 1px solid white; text-align: left; padding: 4px; width: 20%;">
+				##lang.ticket.type##
+			</td>
+			<td style="background-color: #f5e2c4; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%;">
+				##ticket.type##
+			</td>
+		</tr>
+		<tr style="border-bottom: 1px solid white;">
+			<td style="background-color: #f3bf6e; color: black; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; border-right: 1px solid white; text-align: left; padding: 4px; width: 20%;">
+				##lang.ticket.content##
+			</td>
+			<td style="background-color: #f5e2c4; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%;">
+				##ticket.content##
+			</td>
+		</tr>
+		<tr style="border-bottom: 1px solid white;">
+			<td style="background-color: #f3bf6e; color: black; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; border-right: 1px solid white; text-align: left; padding: 4px; width: 20%;">
+				##lang.ticket.solvedate##
+			</td>
+			<td style="background-color: #f5e2c4; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%;">
+				##ticket.solvedate##
+			</td>
+		</tr>
+		<tr style="border-bottom: 1px solid white;">
+			<td style="background-color: #f3bf6e; color: black; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; border-right: 1px solid white; text-align: left; padding: 4px; width: 20%;">
+				##lang.ticket.solution.type##
+			</td>
+			<td style="background-color: #f5e2c4; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%;">
+				##ticket.solution.type##
+			</td>
+		</tr>
+		<tr style="border-bottom: 1px solid white;">
+			<td style="background-color: #f3bf6e; color: black; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; border-right: 1px solid white; text-align: left; padding: 4px; width: 20%;">
+				##lang.ticket.solution.description##
+			</td>
+			<td style="background-color: #f5e2c4; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%;">
+				##ticket.solution.description##
+			</td>
+		</tr>
+	</table>
+</div>
+
+<!--
+##IFticket.storestatus=5##
+	<div>##lang.ticket.url##: <a href="##ticket.urlapprove##">##ticket.urlapprove##</a> <strong> </strong></div>
+	<div><strong>##lang.ticket.autoclosewarning##</strong></div>
+
+	<div>
+		<span style="color: #888888;"><strong><span style="text-decoration: underline;">##lang.ticket.solvedate##</span></strong></span> : ##ticket.solvedate##<br />
+		<span style="text-decoration: underline; color: #888888;"><strong>##lang.ticket.solution.type##</strong></span> : ##ticket.solution.type##<br />
+		<span style="text-decoration: underline; color: #888888;"><strong>##lang.ticket.solution.description##</strong></span> : ##ticket.solution.description##
+	</div>
+##ENDIFticket.storestatus##
+
+##ELSEticket.storestatus##
+	<div>##lang.ticket.url##: <a href="##ticket.url##">##ticket.url##</a></div>
+##ENDELSEticket.storestatus##
+
+<p class="description b"><strong>##lang.ticket.description##</strong></p>
+<p>
+	<span style="color: #8b8c8f; font-weight: bold; text-decoration: underline;"> ##lang.ticket.title##</span>: ##ticket.title## <br />
+	<span style="color: #8b8c8f; font-weight: bold; text-decoration: underline;"> ##lang.ticket.authors##</span>: ##IFticket.authors## ##ticket.authors## ##ENDIFticket.authors## ##ELSEticket.authors##--##ENDELSEticket.authors## <br />
+	<span style="color: #8b8c8f; font-weight: bold; text-decoration: underline;"> ##lang.ticket.creationdate##</span>: ##ticket.creationdate## <br />
+	<span style="color: #8b8c8f; font-weight: bold; text-decoration: underline;"> ##lang.ticket.closedate##</span>: ##ticket.closedate## <br />
+	<span style="color: #8b8c8f; font-weight: bold; text-decoration: underline;"> ##lang.ticket.requesttype##</span>: ##ticket.requesttype##<br />
+	<br />
+</p>
+
+<p>
+	<span style="color: #8b8c8f; font-weight: bold; text-decoration: underline;"> ##lang.ticket.item.name##</span>:
+</p>
+##FOREACHitems##
+	<div class="description b">
+		##IFticket.itemtype## ##ticket.itemtype## - ##ticket.item.name##
+			##IFticket.item.model## ##lang.ticket.item.model## : ##ticket.item.model## ##ENDIFticket.item.model##
+			##IFticket.item.serial## ##lang.ticket.item.serial## : ##ticket.item.serial## ##ENDIFticket.item.serial##
+			##IFticket.item.otherserial## ##lang.ticket.item.otherserial## : ##ticket.item.otherserial## ##ENDIFticket.item.otherserial##
+		##ENDIFticket.itemtype##
+	</div>
+##ENDFOREACHitems##
+
+##IFticket.assigntousers##
+	<span style="color: #8b8c8f; font-weight: bold; text-decoration: underline;"> ##lang.ticket.assigntousers##</span>: ##ticket.assigntousers##<br />
+##ENDIFticket.assigntousers##
+
+<span style="color: #8b8c8f; font-weight: bold; text-decoration: underline;">##lang.ticket.status## </span>: ##ticket.status##<br />
+
+##IFticket.assigntogroups##
+	<span style="color: #8b8c8f; font-weight: bold; text-decoration: underline;"> ##lang.ticket.assigntogroups##</span>: ##ticket.assigntogroups## <br />
+##ENDIFticket.assigntogroups##
+
+<span style="color: #8b8c8f; font-weight: bold; text-decoration: underline;"> ##lang.ticket.urgency##</span> : ##ticket.urgency##<br />
+<span style="color: #8b8c8f; font-weight: bold; text-decoration: underline;"> ##lang.ticket.impact##</span> : ##ticket.impact##<br />
+<span style="color: #8b8c8f; font-weight: bold; text-decoration: underline;"> ##lang.ticket.priority##</span> : ##ticket.priority## <br />
+
+##IFticket.user.email##
+	<span style="color: #8b8c8f; font-weight: bold; text-decoration: underline;"> ##lang.ticket.user.email##</span>: ##ticket.user.email## <br />
+##ENDIFticket.user.email##
+
+##IFticket.category##
+	<span style="color: #8b8c8f; font-weight: bold; text-decoration: underline;">##lang.ticket.category## </span>:##ticket.category##
+##ENDIFticket.category##
+
+##ELSEticket.category##
+	##lang.ticket.nocategoryassigned##<br />
+##ENDELSEticket.category## 
+
+<span style="color: #8b8c8f; font-weight: bold; text-decoration: underline;"> ##lang.ticket.content##</span>: ##ticket.content##
+
+##IFticket.storestatus=6##
+<span style="text-decoration: underline;"><strong><span style="color: #888888;">##lang.ticket.solvedate##</span></strong></span>: ##ticket.solvedate##<br />
+<span style="color: #888888;"><strong><span style="text-decoration: underline;">##lang.ticket.solution.type##</span></strong></span>: ##ticket.solution.type##<br />
+<span style="text-decoration: underline; color: #888888;"><strong>##lang.ticket.solution.description##</strong></span>: ##ticket.solution.description##<br />
+##ENDIFticket.storestatus##
+-->
+<br />
+<br />
+##IFticket.numberoftasks=0## ##ENDIFticket.numberoftasks##
+##ELSEticket.numberoftasks##
+	<div class="description b">##lang.ticket.numberoftasks##: ##ticket.numberoftasks##</div>
+	##FOREACHtasks##
+		<strong> [##task.date##] <em>##lang.task.isprivate## : ##task.isprivate## </em></strong><br />
+		<span style="color: #8b8c8f; font-weight: bold; text-decoration: underline;"> ##lang.task.author##</span> ##task.author##<br />
+		<span style="color: #8b8c8f; font-weight: bold; text-decoration: underline;"> ##lang.task.description##</span> ##task.description##<br />
+		<span style="color: #8b8c8f; font-weight: bold; text-decoration: underline;"> ##lang.task.time##</span> ##task.time##<br />
+		<span style="color: #8b8c8f; font-weight: bold; text-decoration: underline;"> ##lang.task.category##</span> ##task.category##<br />
+	##ENDFOREACHtasks##
+##ENDELSEticket.numberoftasks##
