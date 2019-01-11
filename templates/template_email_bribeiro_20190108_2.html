@@ -1,5 +1,33 @@
 <!DOCTYPE html>
-<b style="font-family: monospace; font-size: 14px; color: red;">##IFticket.storestatus=6##</b>
+
+<style type="text/css">
+/*
+span.MsoHyperlink {
+	mso-style-priority:99;
+	color:inherit;
+}
+
+span.MsoHyperlinkFollowed {
+	mso-style-priority:99;
+	color:inherit;
+}
+*/
+
+.variaveis {
+	font-family: monospace;
+	font-size: 14px;
+	color: red;
+}
+
+a:visited {
+	text-decoration: none;
+	/*color: white;*/
+	font-family: Calibri;
+	font-weight: bold;
+}
+</style>
+
+<b class="variaveis">##IFticket.storestatus=6##</b>
 <table style="width: 100%; min-width: 60%; text-align: center; border-collapse: collapse;">
 	<tr>
 		<td style="
@@ -7,16 +35,17 @@
 			color:				white;
 			height:				35px;
 			padding:			5px;
-			border-radius:		25px;
+			border-radius:		5px;
 			font-family:		Calibri;
 			font-size:			18px;
 			text-align:			center;
-			box-shadow: 0 5px 5px rgba(0, 0, 0, 0.08); 
 		">
 			<table style="margin: auto;">
 				<tr>
-					<td><img src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/checkered-raised-flag-inverted.png" width="14" height="14"></td>
-					<td style="color: white; font-family: Calibri; font-size: 18px;"><b>ENCERRAMENTO DO CHAMADO</b></td>
+					<td><img alt="ENCERRAMENTO DO CHAMADO" src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/checkered-raised-flag-inverted.png" width="14" height="14"></td>
+					<td style="color: white; font-family: Calibri; font-size: 18px; font-weight: bold;">
+						ENCERRAMENTO DO CHAMADO ##ticket.id##
+					</td>
 				</tr>
 			</table>
 		</td>
@@ -40,21 +69,45 @@
 		">
 			<table style="margin: auto;">
 				<tr>
-					<td><img src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/correct-symbol-inverted.png" width="14" height="14"></td>
-					<td style="color: white; font-family: Calibri; font-size: 18px; text-align: center;"><b>SOLUÇÃO DO CHAMADO</b></td>
+					<td><img alt="SOLUÇÃO DO CHAMADO" src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/correct-symbol-inverted.png" width="14" height="14"></td>
+					<td style="color: white; font-family: Calibri; font-size: 18px; text-align: center;">
+						<a href="##ticket.url##" style="text-decoration: none; color: white; font-family: Calibri; font-weight: bold;">
+							SOLUÇÃO DO CHAMADO ##ticket.id##
+						</a>
+					</td>
 				</tr>
 			</table>
 		</td>
 	</tr>
 	<tr style="background-color: #6bb6d6; color: white; font-family: Calibri; font-size: 14px;">
-		<th><b>Data/Hora</b></th>
-		<th><b>Autor</b></th>
-		<th><b>##lang.ticket.solution.type##</b></th>
-	</tr>
-	<tr style="background-color: #6bb6d6; color: white; font-family: Calibri; font-size: 14px;">
-		<td>##ticket.solvedate##</td>
-		<td>##ticket.solution.approval.author##</td>
-		<td>##IFticket.solution.type## ##ticket.solution.type## ##ENDIFticket.solution.type## ##ELSEticket.solution.type## ##ENDELSEticket.solution.type##</td>
+		<td>
+			<table style="margin: auto; padding: 5px;">
+				<tr>
+					<td><img alt="Data/Hora" src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/time-inverted.png" width="14" height="14"></td>
+					<td style="font-family: Calibri; font-size: 15px; color: white; text-align: center;">##ticket.solvedate##</td>
+				</tr>
+			</table>
+		</td>
+		<td>
+			<table style="margin: auto; padding: 5px;">
+				<tr>
+					<td><img alt="" src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/user-shape-inverted.png" width="14" height="14"></td>
+					<td style="font-family: Calibri; font-size: 15px; color: white; text-align: center;">##ticket.solution.approval.author##</td>
+				</tr>
+			</table>
+		</td>
+		<td>
+			##IFticket.solution.type##
+				<table style="margin: auto; padding: 5px;">
+					<tr>
+						<td><img alt="" src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/tag-black-shape-inverted.png" width="14" height="14"></td>
+						<td style="font-family: Calibri; font-size: 15px; color: white; text-align: center;">##ticket.solution.type##</td>
+					</tr>
+				</table>
+			##ENDIFticket.solution.type##
+			##ELSEticket.solution.type##
+			##ENDELSEticket.solution.type##
+		</td>
 	</tr>
 	<tr>
 		<td colspan="3"
@@ -64,7 +117,6 @@
 				text-align: center;
 				border-bottom-left-radius:	5px;
 				border-bottom-right-radius:	5px;
-				box-shadow: 0 5px 5px rgba(0, 0, 0, 0.08);
 			">
 			<div style="text-align: left; font-family: Calibri; font-size: 15px; ">##ticket.solution.description##</div>
 		</td>
@@ -94,21 +146,45 @@
 				">
 					<table style="margin: auto;">
 						<tr>
-							<td><img src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/correct-symbol-inverted.png" width="14" height="14"></td>
-							<td style="color: white; font-family: Calibri; font-size: 18px; text-align: center;"><b>SOLUÇÃO DO CHAMADO</b></td>
+							<td><img alt="" src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/correct-symbol-inverted.png" width="14" height="14"></td>
+							<td style="color: white; font-family: Calibri; font-size: 18px; text-align: center;">
+								<a href="##ticket.url##" style="text-decoration: none; color: white; font-family: Calibri; font-weight: bold;">
+									SOLUÇÃO DO CHAMADO ##ticket.id##
+								</a>
+							</td>
 						</tr>
 					</table>
 				</td>
 			</tr>
 			<tr style="background-color: #6bb6d6; color: white; font-family: Calibri; font-size: 14px;">
-				<th><b>Data/Hora</b></th>
-				<th><b>Autor</b></th>
-				<th><b>##lang.ticket.solution.type##</b></th>
-			</tr>
-			<tr style="background-color: #6bb6d6; color: white; font-family: Calibri; font-size: 14px;">
-				<td>##ticket.solvedate##</td>
-				<td>##ticket.solution.approval.author##</td>
-				<td>##IFticket.solution.type## ##ticket.solution.type## ##ENDIFticket.solution.type## ##ELSEticket.solution.type## ##ENDELSEticket.solution.type##</td>
+				<td>
+					<table style="margin: auto; padding: 5px;">
+						<tr>
+							<td><img alt="Data/Hora" src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/time-inverted.png" width="14" height="14"></td>
+							<td style="font-family: Calibri; font-size: 15px; color: white; text-align: center;">##ticket.solvedate##</td>
+						</tr>
+					</table>
+				</td>
+				<td>
+					<table style="margin: auto; padding: 5px;">
+						<tr>
+							<td><img alt="" src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/user-shape-inverted.png" width="14" height="14"></td>
+							<td style="font-family: Calibri; font-size: 15px; color: white; text-align: center;">##ticket.solution.approval.author##</td>
+						</tr>
+					</table>
+				</td>
+				<td>
+					##IFticket.solution.type##
+						<table style="margin: auto; padding: 5px;">
+							<tr>
+								<td><img alt="" src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/tag-black-shape-inverted.png" width="14" height="14"></td>
+								<td style="font-family: Calibri; font-size: 15px; color: white; text-align: center;">##ticket.solution.type##</td>
+							</tr>
+						</table>
+					##ENDIFticket.solution.type##
+					##ELSEticket.solution.type##
+					##ENDELSEticket.solution.type##
+				</td>
 			</tr>
 			<tr>
 				<td colspan="3" style="padding: 8px;  background-color: #9fd6ed; text-align: center;">
@@ -127,7 +203,6 @@
 						font-family: 				Calibri;
 						font-size: 					15px;
 						text-align: 				center;
-						box-shadow: 0 5px 5px rgba(0, 0, 0, 0.08);
 					">
 					<b>Observação: ##lang.ticket.autoclosewarning##</b>
 				</td>
@@ -158,8 +233,12 @@
 				>
 					<table style="margin: auto;">
 						<tr>
-							<td><img src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/comment-black-oval-bubble-shape-inverted.png" width="14" height="14"></td>
-							<td style="color: white; font-family: Calibri; font-size: 18px; text-align: center;"><b>ACOMPANHAMENTOS DO CHAMADO</b></td>
+							<td><img alt="" src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/comment-black-oval-bubble-shape-inverted.png" width="14" height="14"></td>
+							<td style="color: white; font-family: Calibri; font-size: 18px; text-align: center;">
+								<a href="##ticket.url##" style="text-decoration: none; color: white; font-family: Calibri; font-weight: bold;">
+									ACOMPANHAMENTOS DO CHAMADO ##ticket.id##
+								</a>
+							</td>
 						</tr>
 					</table>
 				</td>
@@ -174,7 +253,6 @@
 					font-family:				Calibri;
 					font-size:					13px;
 					text-align:					center;
-					box-shadow: 0 5px 5px rgba(0, 0, 0, 0.08);
 				">
 					##lang.ticket.numberoffollowups##: ##ticket.numberoffollowups##
 				</td>
@@ -191,7 +269,7 @@
 					<td style="border-top-left-radius: 5px;">
 						<table style="margin: auto; padding: 5px;">
 							<tr>
-								<td><img src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/time-inverted.png" width="14" height="14"></img></td>
+								<td><img alt="" src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/time-inverted.png" width="14" height="14"></td>
 								<td style="font-family: Calibri; font-size: 15px; color: white; text-align: center;">##followup.date##</td>
 							</tr>
 						</table>
@@ -199,7 +277,7 @@
 					<td>
 						<table style="margin: auto; padding: 5px;">
 							<tr>
-								<td><img src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/user-shape-inverted.png" width="14" height="14"></img></td>
+								<td><img alt="" src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/user-shape-inverted.png" width="14" height="14"></td>
 								<td style="font-family: Calibri; font-size: 15px; color: white; text-align: center;">##followup.author##</td>
 							</tr>
 						</table>
@@ -207,7 +285,7 @@
 					<td>
 						<table style="margin: auto; padding: 5px;">
 							<tr>
-								<td><img src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/share-option-inverted.png" width="14" height="14"></img></td>
+								<td><img alt="" src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/share-option-inverted.png" width="14" height="14"></td>
 								<td style="font-family: Calibri; font-size: 15px; color: white; text-align: center;">##followup.requesttype##</td>
 							</tr>
 						</table>
@@ -217,10 +295,10 @@
 							<tr>
 								<td>
 									##IFfollowup.isprivate=Sim##
-										<img src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/padlock-inverted.png" width="14" height="14"></img>
+										<img alt="" src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/padlock-inverted.png" width="14" height="14">
 									##ENDIFfollowup.isprivate##
 									##ELSEfollowup.isprivate##
-										<img src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/open-padlock-silhouette-inverted.png" width="14" height="14"></img>
+										<img alt="" src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/open-padlock-silhouette-inverted.png" width="14" height="14">
 									##ENDELSEfollowup.isprivate##
 								</td>
 							</tr>
@@ -236,7 +314,6 @@
 							min-height: 25px;
 							border-bottom-left-radius:	5px;
 							border-bottom-right-radius:	5px;
-							box-shadow: 0 5px 5px rgba(0, 0, 0, 0.08);
 					">
 						<div style="text-align: left; font-family: Calibri; font-size: 15px;">##followup.description##</div>
 					</td>
@@ -269,8 +346,12 @@
 				>
 					<table style="margin: auto;">
 						<tr>
-							<td><img src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/open-wrench-tool-silhouette-inverted.png" width="14" height="14"></td>
-							<td style="color: white; font-family: Calibri; font-size: 18px; text-align: center;"><b>TAREFAS DO CHAMADO</b></td>
+							<td><img alt="" src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/open-wrench-tool-silhouette-inverted.png" width="14" height="14"></td>
+							<td style="color: white; font-family: Calibri; font-size: 18px; text-align: center;">
+								<a href="##ticket.url##" style="text-decoration: none; color: white; font-family: Calibri; font-weight: bold;">
+									TAREFAS DO CHAMADO ##ticket.id##
+								</a>
+							</td>
 						</tr>
 					</table>
 				</td>
@@ -285,7 +366,6 @@
 					font-family:				Calibri;
 					font-size:					13px;
 					text-align:					center;
-					box-shadow: 0 5px 5px rgba(0, 0, 0, 0.08);
 				">
 					##lang.ticket.numberoftasks##: ##ticket.numberoftasks##
 				</td>
@@ -355,7 +435,7 @@
 <b style="font-family: monospace; font-size: 14px; color: red;">##ENDELSEticket.numberoftasks##</b>
 
 
-<div style="text-align: center;">
+<div style="background-color: #b2e0b6; text-align: center; border-radius: 5px;">
 	<table style="width: 100%; min-width: 60%; text-align: center; border-collapse: collapse; font-family: Calibri; font-size: 15px; border-radius: 5px;">
 		<tr>
 			<td colspan="2"
@@ -373,8 +453,14 @@
 			>
 				<table style="margin: auto;">
 					<tr>
-						<td><img src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/text-file-1-inverted.png" width="14" height="14"></td>
-						<td style="color: white; font-family: Calibri; font-size: 18px; text-align: center;"><b>DADOS DO CHAMADO</b></td>
+						<td>
+							<img alt="DADOS DO CHAMADO" src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/text-file-1-inverted.png" width="14" height="14">
+						</td>
+						<td style="color: white; font-family: Calibri; font-size: 18px; text-align: center;">
+							<a href="##ticket.url##" style="text-decoration: none; color: white; font-family: Calibri; font-weight: bold;">
+								DADOS DO CHAMADO ##ticket.id##
+							</a>
+						</td>
 					</tr>
 				</table>
 			</td>
@@ -385,14 +471,6 @@
 			</td>
 			<td style="background-color: #b2e0b6; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%;">
 				<a href="##ticket.url##">##ticket.id##</a>
-			</td>
-		</tr>
-		<tr style="border-bottom: 1px solid white;">
-			<td style="background-color: #9dc6a1; color: black; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; border-right: 1px solid white; text-align: left; padding: 4px; width: 20%;">
-				URL
-			</td>
-			<td style="background-color: #b2e0b6; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%;">
-				##ticket.url##
 			</td>
 		</tr>
 		<tr style="border-bottom: 1px solid white;">
@@ -562,10 +640,10 @@
 			</td>
 		</tr>
 		<tr style="border-bottom: 1px solid white;">
-			<td style="background-color: #9dc6a1; color: black; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; border-right: 1px solid white; text-align: left; padding: 4px; width: 20%; border-bottom-left-radius: 5px; box-shadow: 0 5px 5px rgba(0, 0, 0, 0.08);">
+			<td style="background-color: #9dc6a1; color: black; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; border-right: 1px solid white; text-align: left; padding: 4px; width: 20%; border-bottom-left-radius: 5px;">
 				##lang.ticket.closedate##
 			</td>
-			<td style="background-color: #b2e0b6; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%; border-bottom-right-radius: 5px; box-shadow: 0 5px 5px rgba(0, 0, 0, 0.08);">
+			<td style="background-color: #b2e0b6; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%; border-bottom-right-radius: 5px;">
 				##ticket.closedate##
 			</td>
 		</tr>
