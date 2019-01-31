@@ -13,60 +13,98 @@ span.MsoHyperlinkFollowed {
 }
 */
 
-.variaveis {
-	font-family: monospace;
-	font-size: 14px;
-	color: red;
+table tr td img {
+	visibility: visible; /* visualizar ou não imagens no e-mail: visible|hidden */
 }
 
-a:visited {
+.encerramento_table_td {
+	background-color:	#607d8b;
+	color:				white;
+	border-bottom:		0px solid white;
+	height:				35px;
+	padding:			5px;
+	border-radius:		5px;
+	font-family:		Calibri;
+	font-size:			18px;
+	text-align:			center;
+}
+
+.solucao_table_td {
+	background-color:			#3796bf;
+	color:						white;
+	border-bottom:				0px solid white;
+	height:						35px;
+	padding:					5px;
+	border-top-left-radius:		5px;
+	border-top-right-radius:	5px;
+	font-family:				Calibri;
+	font-size:					18px;
+	text-align:					center;
+}
+
+.td_title_inside {
+	color: white;
+	font-family: Calibri;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.table_block {
+	width: 100%;
+	min-width: 60%;
+	text-align: center;
+	border-collapse: collapse;
+}
+
+.table_inside {
+	margin: auto;
+}
+
+.variaveis_condicionais {
+	font-family: monospace;
+	font-size: 15px;
+	color: red;
+	font-weight: bold;
+}
+
+.link_white a:visited {
 	text-decoration: none;
-	/*color: white;*/
+	color: white;
 	font-family: Calibri;
 	font-weight: bold;
 }
+
+.link_black a:visited {
+	text-decoration: none;
+	color: black;
+	font-family: Calibri;
+	font-weight: bold;
+}
+
+.data {
+	color: inherit !important;
+	text-decoration: none !important;
+}
 </style>
 
-<b class="variaveis">##IFticket.storestatus=6##</b>
-<table style="width: 100%; min-width: 60%; text-align: center; border-collapse: collapse;">
+<b class="variaveis_condicionais">##IFticket.storestatus=6##</b>
+<table class="table_block">
 	<tr>
-		<td style="
-			background-color:	#607d8b;
-			color:				white;
-			height:				35px;
-			padding:			5px;
-			border-radius:		5px;
-			font-family:		Calibri;
-			font-size:			18px;
-			text-align:			center;
-		">
-			<table style="margin: auto;">
+		<td class="encerramento_table_td">
+			<table class="table_inside">
 				<tr>
 					<td><img alt="ENCERRAMENTO DO CHAMADO" src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/checkered-raised-flag-inverted.png" width="14" height="14"></td>
-					<td style="color: white; font-family: Calibri; font-size: 18px; font-weight: bold;">
-						ENCERRAMENTO DO CHAMADO ##ticket.id##
-					</td>
+					<td class="td_title_inside">ENCERRAMENTO DO CHAMADO ##ticket.id##</td>
 				</tr>
 			</table>
 		</td>
 	</tr>
 </table>
 <div> </div>
-<table style="width: 100%; min-width: 60%; text-align: center; border-collapse: collapse; border-radius: 5px;">
+<table class="table_block">
 	<tr>
 		<td	colspan="3"
-			style="
-			background-color:			#3796bf;
-			color:						white;
-			border-bottom:				0px solid white;
-			height:						35px;
-			padding:					5px;
-			border-top-left-radius:		5px;
-			border-top-right-radius:	5px;
-			font-family:				Calibri;
-			font-size:					18px;
-			text-align:					center;
-		">
+			class="solucao_table_td">
 			<table style="margin: auto;">
 				<tr>
 					<td><img alt="SOLUÇÃO DO CHAMADO" src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/correct-symbol-inverted.png" width="14" height="14"></td>
@@ -84,7 +122,9 @@ a:visited {
 			<table style="margin: auto; padding: 5px;">
 				<tr>
 					<td><img alt="Data/Hora" src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/time-inverted.png" width="14" height="14"></td>
-					<td style="font-family: Calibri; font-size: 15px; color: white; text-align: center;">##ticket.solvedate##</td>
+					<td style="font-family: Calibri; font-size: 15px; color: white; text-align: center;">
+						<a rel="nofollow" class="data">##ticket.solvedate##</a>
+					</td>
 				</tr>
 			</table>
 		</td>
@@ -124,11 +164,11 @@ a:visited {
 </table>
 <div> </div>
 <div> </div>
-<b style="font-family: monospace; font-size: 14px; color: red;">##ENDIFticket.storestatus##</b>
+<b class="variaveis_condicionais">##ENDIFticket.storestatus##</b>
 
 
-<b style="font-family: monospace; font-size: 14px; color: red;">##ELSEticket.storestatus##</b>
-	<b style="font-family: monospace; font-size: 14px; color: red;">##IFticket.storestatus=5##</b>
+<b class="variaveis_condicionais">##ELSEticket.storestatus##</b>
+	<b class="variaveis_condicionais">##IFticket.storestatus=5##</b>
 		<table style="width: 100%; min-width: 60%; text-align: center; border-collapse: collapse; border-radius: 5px;">
 			<tr>
 				<td	colspan="3"
@@ -161,7 +201,9 @@ a:visited {
 					<table style="margin: auto; padding: 5px;">
 						<tr>
 							<td><img alt="Data/Hora" src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/time-inverted.png" width="14" height="14"></td>
-							<td style="font-family: Calibri; font-size: 15px; color: white; text-align: center;">##ticket.solvedate##</td>
+							<td style="font-family: Calibri; font-size: 15px; color: white; text-align: center;">
+								<a rel="nofollow" class="data">##ticket.solvedate##</a>
+							</td>
 						</tr>
 					</table>
 				</td>
@@ -210,13 +252,13 @@ a:visited {
 		</table>
 	<div> </div>
 	<div> </div>
-	<b style="font-family: monospace; font-size: 14px; color: red;">##ENDIFticket.storestatus##</b>
-<b style="font-family: monospace; font-size: 14px; color: red;">##ENDELSEticket.storestatus##</b>
+	<b class="variaveis_condicionais">##ENDIFticket.storestatus##</b>
+<b class="variaveis_condicionais">##ENDELSEticket.storestatus##</b>
 
-<b style="font-family: monospace; font-size: 14px; color: red;">##IFticket.numberoffollowups=0##</b>
-<b style="font-family: monospace; font-size: 14px; color: red;">##ENDIFticket.numberoffollowups##</b>
+<b class="variaveis_condicionais">##IFticket.numberoffollowups=0##</b>
+<b class="variaveis_condicionais">##ENDIFticket.numberoffollowups##</b>
 
-<b style="font-family: monospace; font-size: 14px; color: red;">##ELSEticket.numberoffollowups##</b>
+<b class="variaveis_condicionais">##ELSEticket.numberoffollowups##</b>
 	<div style="font-family: Calibri; font-size: 15px; text-align: center;">
 		<table style="width: 100%; min-width: 60%; text-align: center; border-collapse: collapse; border-radius: 5px;">
 			<tr>
@@ -262,7 +304,7 @@ a:visited {
 
 	<div> </div>
 
-	<b style="font-family: monospace; font-size: 14px; color: red;">##FOREACHfollowups##</b>
+	<b class="variaveis_condicionais">##FOREACHfollowups##</b>
 		<div style="font-family: Calibri; font-size: 15px; text-align: center;">
 			<table style="width: 100%; min-width: 60%; text-align: center; border-collapse: collapse; border-radius: 5px;">
 				<tr style="background-color: #939393; color: white; font-family: Calibri; font-size: 15px;">
@@ -270,7 +312,9 @@ a:visited {
 						<table style="margin: auto; padding: 5px;">
 							<tr>
 								<td><img alt="" src="https://hokensistemas.github.io/glpi/img/fontawesome/png_inverted/time-inverted.png" width="14" height="14"></td>
-								<td style="font-family: Calibri; font-size: 15px; color: white; text-align: center;">##followup.date##</td>
+								<td style="font-family: Calibri; font-size: 15px; color: white; text-align: center;">
+									<a rel="nofollow" class="data">##followup.date##</a>
+								</td>
 							</tr>
 						</table>
 					</td>
@@ -322,14 +366,14 @@ a:visited {
 		</div>
 		<div> </div>
 		<div> </div>
-	<b style="font-family: monospace; font-size: 14px; color: red;">##ENDFOREACHfollowups##</b>
-<b style="font-family: monospace; font-size: 14px; color: red;">##ENDELSEticket.numberoffollowups##</b>
+	<b class="variaveis_condicionais">##ENDFOREACHfollowups##</b>
+<b class="variaveis_condicionais">##ENDELSEticket.numberoffollowups##</b>
 
 
-<b style="font-family: monospace; font-size: 14px; color: red;">##IFticket.numberoftasks=0##</b>
-<b style="font-family: monospace; font-size: 14px; color: red;">##ENDIFticket.numberoftasks##</b>
+<b class="variaveis_condicionais">##IFticket.numberoftasks=0##</b>
+<b class="variaveis_condicionais">##ENDIFticket.numberoftasks##</b>
 
-<b style="font-family: monospace; font-size: 14px; color: red;">##ELSEticket.numberoftasks##</b>
+<b class="variaveis_condicionais">##ELSEticket.numberoftasks##</b>
 	<div style="font-family: Calibri; font-size: 15px; text-align: center;">
 		<table style="width: 100%; min-width: 60%; text-align: center; border-collapse: collapse; border-radius: 5px;">
 			<tr>
@@ -375,7 +419,7 @@ a:visited {
 
 	<div> </div>
 	
-	<b style="font-family: monospace; font-size: 14px; color: red;">##FOREACHtasks##</b>
+	<b class="variaveis_condicionais">##FOREACHtasks##</b>
 		<div>
 			<table style="width: 100%; font-family: Calibri; font-size: 15px; border-collapse: collapse;">
 				<tr>
@@ -397,7 +441,9 @@ a:visited {
 				</tr>
 				<tr>
 					<td style="width: 20%; background-color: #eaca88; border-bottom: 1px solid white; border-right: 1px solid white;">##lang.task.date##</td>
-					<td style="width: 80%; background-color: #feda90; border-bottom: 1px solid white; border-right: 0px solid white;">##task.date##</td>
+					<td style="width: 80%; background-color: #feda90; border-bottom: 1px solid white; border-right: 0px solid white;">
+						<a rel="nofollow" class="data">##task.date##</a>
+					</td>
 				</tr>
 				<tr>
 					<td style="width: 20%; background-color: #eaca88; border-bottom: 1px solid white; border-right: 1px solid white;">##lang.task.description##</td>
@@ -431,8 +477,8 @@ a:visited {
 		</div>
 		<div> </div>
 		<div> </div>
-	<b style="font-family: monospace; font-size: 14px; color: red;">##ENDFOREACHtasks##</b>
-<b style="font-family: monospace; font-size: 14px; color: red;">##ENDELSEticket.numberoftasks##</b>
+	<b class="variaveis_condicionais">##ENDFOREACHtasks##</b>
+<b class="variaveis_condicionais">##ENDELSEticket.numberoftasks##</b>
 
 
 <div style="background-color: #b2e0b6; text-align: center; border-radius: 5px;">
@@ -486,7 +532,7 @@ a:visited {
 				##lang.ticket.creationdate##
 			</td>
 			<td style="background-color: #b2e0b6; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%;">
-				##ticket.creationdate##
+				<a rel="nofollow" class="data">##ticket.creationdate##</a>
 			</td>
 		</tr>
 		<tr style="border-bottom: 1px solid white;">
@@ -620,7 +666,7 @@ a:visited {
 				##lang.ticket.solvedate##
 			</td>
 			<td style="background-color: #b2e0b6; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%;">
-				##ticket.solvedate##
+				<a rel="nofollow" class="data">##ticket.solvedate##</a>
 			</td>
 		</tr>
 		<tr style="border-bottom: 1px solid white;">
@@ -644,7 +690,7 @@ a:visited {
 				##lang.ticket.closedate##
 			</td>
 			<td style="background-color: #b2e0b6; text-align: left; font-family: Calibri; font-size: 15px; border-bottom: 1px solid white; padding: 4px; width: 80%; border-bottom-right-radius: 5px;">
-				##ticket.closedate##
+				<a rel="nofollow" class="data">##ticket.closedate##</a>
 			</td>
 		</tr>
 	</table>
